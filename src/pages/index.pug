@@ -1,5 +1,11 @@
 extends ../layouts/main
 
+append meta
+  include ../includes/meta
+
+prepend styles
+  include ../includes/preload-fonts
+
 block content
   main#main
     h1 Keepsake
