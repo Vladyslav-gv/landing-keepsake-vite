@@ -1,0 +1,4 @@
+//- +icon('heart')(class="icon--accent")
+mixin icon(name)
+  svg.icon(aria-hidden="true" focusable="false")&attributes(attributes)
+    use(href=`#i-${name}`)

@@ -5,9 +5,11 @@ html(lang="en")
       meta(charset="UTF-8")
       meta(name="viewport" content="width=device-width, initial-scale=1")
     block title
-      title Keepsake — a digital & branding agency
+      title Keepsake — a digital &amp; branding agency
     block styles
       link(rel="stylesheet" href="/src/styles/main.scss")
   body#top
+    include ../mixins/index
+    block data
     block content
     block scripts

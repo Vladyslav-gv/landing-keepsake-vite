@@ -1,0 +1,18 @@
+//- +btn('Get in touch', '#contact', 'secondary')(aria-label="...")
+//- Вкладений вміст (іконка) виводиться перед текстом
+mixin btn(text, href, variant = 'primary')
+  case variant
+    when 'secondary'
+      - var modifier = 'btn--secondary'
+    when 'ghost'
+      - var modifier = 'btn--ghost'
+    default
+      - var modifier = 'btn--primary'
+  if href
+    a.btn(class=modifier href=href)&attributes(attributes)
+      block
+      = text
+  else
+    button.btn(class=modifier type="button")&attributes(attributes)
+      block
+      = text
