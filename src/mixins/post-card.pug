@@ -1,0 +1,12 @@
+mixin post-card(post)
+  article.post
+    +picture(post.image, '', { widths: [150, 300], width: 300, height: 300, sizes: '(min-width: 768px) 150px, 96px', cls: 'post__image' })
+    .post__body
+      p.post__meta
+        time(datetime=post.date)= post.dateText
+        |  · #{post.category}
+      h3.post__title= post.title
+      p.post__text= post.text
+      a.link(href="#journal")
+        | Read more
+        span.visually-hidden  about #{post.title.toLowerCase()}
