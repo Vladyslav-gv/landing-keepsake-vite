@@ -1,0 +1,7 @@
+section.section#journal(aria-labelledby="journal-title")
+  .container
+    h2.section-title#journal-title From the journal
+    p.section-intro Notes on craft, process and the things we find along the way.
+    .journal
+      each post in posts
+        +post-card(post)

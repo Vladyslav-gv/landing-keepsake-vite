@@ -10,9 +10,16 @@ block data
   include ../data/index
 
 block content
+  a.skip-link(href="#main") Skip to content
+  include ../components/header
   main#main
-    h1 Keepsake
-    ul
-      each work, i in works
-        li.card(data-category=work.categories.join(' '))
-          +work-card(work)
+    include ../components/sections/hero
+    include ../components/sections/works
+    include ../components/sections/cta
+    include ../components/sections/services
+    include ../components/sections/stats
+    include ../components/sections/clients
+    include ../components/sections/journal
+  include ../components/footer
+  a.to-top(href="#top" aria-label="Back to top")
+    +icon('arrow-up')
