@@ -1,0 +1,9 @@
+mixin work-card(work)
+  a.card__link(href="#works")
+    +picture(work.image, work.alt, { sizes: '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw', cls: 'card__image' })
+    span.card__overlay
+      span.card__plus
+        +icon('plus')
+      span.card__title= work.title
+      span.card__line
+      span.card__category= work.label

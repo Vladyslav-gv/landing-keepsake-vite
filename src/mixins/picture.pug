@@ -1,0 +1,10 @@
+mixin picture(name, alt, opts)
+  -
+    const o = Object.assign({ widths: [360, 720], width: 720, height: 570, sizes: '100vw', lazy: true, priority: false, cls: '' }, opts)
+    const base = `/src/assets/images/${name}`
+    const srcset = (ext) => o.widths.map((w) => `${base}-${w}.${ext} ${w}w`).join(', ')
+    const largest = Math.max(...o.widths)
+  picture
+    source(type="image/avif" srcset=srcset('avif') sizes=o.sizes)
+    source(type="image/webp" srcset=srcset('webp') sizes=o.sizes)
+    img(class=o.cls src=`${base}-${largest}.jpg` alt=alt width=o.width height=o.height decoding="async" loading=(o.lazy ? 'lazy' : false) fetchpriority=(o.priority ? 'high' : false))&attributes(attributes)
