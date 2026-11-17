@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.filter {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: rem(8);
+  padding-inline: var(--gutter);
+  margin-inline: calc(-1 * var(--gutter)); // mobile: рядок виходить за край екрана
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  @include mq(md) {
+    flex-wrap: wrap;
+    padding-inline: 0;
+    margin-inline: 0;
+    overflow: visible;
+  }
+
+  &__input {
+    @include visually-hidden;
+  }
+}

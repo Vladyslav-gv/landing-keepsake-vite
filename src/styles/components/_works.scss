@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+.works {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    margin-bottom: var(--gap-block);
+
+    @include mq(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap);
+
+    @include mq(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__more {
+    @include flex-center;
+
+    margin-top: var(--gap-block);
+  }
+}
+
+// Фільтр без JS: радіокнопка :checked ~ чипс / карточки
+@each $f in $filters {
+  .filter__input--#{$f}:checked ~ .works__head .chip--#{$f} {
+    color: var(--color-white);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  // фокус з клавіатури на прихованій радіокнопці показуємо на її чипсі
+  .filter__input--#{$f}:focus-visible ~ .works__head .chip--#{$f} {
+    @include focus-ring;
+  }
+
+  @if $f != all {
+    .filter__input--#{$f}:checked ~ .works__grid .card:not([data-category~='#{$f}']) {
+      display: none;
+    }
+  }
+}
