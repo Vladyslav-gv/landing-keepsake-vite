@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.link {
+  display: inline-block;
+  font: 400 var(--fs-ui) / 1 var(--font-heading);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-ui);
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-accent-hover);
+  }
+}
