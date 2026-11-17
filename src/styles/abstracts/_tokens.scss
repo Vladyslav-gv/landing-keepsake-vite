@@ -1,0 +1,66 @@
+@use 'functions' as *;
+
+// Кольори -> CSS custom properties --color-*
+$colors: (
+  'accent': #f95858,
+  'accent-hover': #e44646,
+  'teal': #2cd5c4,
+  'text-dark': #3a3a3c,
+  'text': #666a6e,
+  'muted': #9aa0a6,
+  'bg-light': #f0f3f4,
+  'border': #e1e5e8,
+  'footer': #2a2a2d,
+  'overlay': rgb(30 32 36 / 82%),
+  'white': #fff,
+  'footer-border': rgb(255 255 255 / 12%),
+  'footer-field': rgb(255 255 255 / 6%),
+  'footer-text': #b4b8bc,
+  'focus': var(--color-text-dark),
+  'social-behance': #f5a623,
+  'social-facebook': #3b6ac2,
+  'social-linkedin': #1f8cc9,
+  'social-dribbble': #ea5b95,
+  'social-instagram': #e55b8a,
+);
+
+// Шрифти -> --font-*
+$fonts: (
+  'heading': '"Oswald", "Arial Narrow", sans-serif',
+  'body': '"Open Sans", Arial, sans-serif',
+  'logo': '"Dancing Script", cursive',
+);
+
+// Решта токенів. base = mobile (375), md = tablet, lg = desktop.
+// Якщо ключа немає, значення успадковується з попереднього брейкпоінта.
+$tokens: (
+  'fs-hero': (base: rem(26), md: rem(32), lg: rem(40)),
+  'fs-cta': (base: rem(22), md: rem(24), lg: rem(28)),
+  'fs-section': (base: rem(18)),
+  'fs-ui': (base: rem(12), md: rem(13)),
+  'fs-body': (base: rem(14)),
+  'lh-body': (base: 1.5714),
+  'fs-quote': (base: rem(16), md: rem(19), lg: rem(22)),
+  'fs-stat': (base: rem(38), md: rem(40), lg: rem(48)),
+  'fs-logo': (base: rem(22), md: rem(26)),
+  'fs-logo-mark': (base: rem(34), md: rem(40)),
+  'fs-small': (base: rem(12)),
+  'ls-hero': (base: 3px),
+  'ls-section': (base: 1.5px),
+  'ls-ui': (base: 1px),
+  'section-gap': (base: 56px, md: 72px, lg: 90px),
+  'gutter': (base: 20px, md: 40px, lg: 90px),
+  'container-max': (base: 1100px),
+  'grid-gap': (base: 12px, lg: 14px),
+  'gap-items': (base: 24px),
+  'gap-block': (base: 32px),
+  'box-pad': (base: 24px, md: 32px, lg: 40px),
+  'card-ratio': (base: '1 / 0.72', md: '1 / 0.79'),
+  'icon-service': (base: 72px, md: 96px),
+  'post-thumb': (base: 96px, md: 150px),
+  'header-h': (base: 64px, md: 72px),
+  'control': (base: 40px, md: 36px),
+  'control-top': (base: 44px),
+  'z-header': (base: 100),
+  'z-top': (base: 90),
+);

@@ -1,0 +1,6 @@
+@use 'sass:math';
+
+// rem(26) -> 1.625rem (за базовим розміром шрифту 16px)
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
