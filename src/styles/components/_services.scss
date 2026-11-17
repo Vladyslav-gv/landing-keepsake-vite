@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // mobile і tablet: 2×2
+  gap: var(--gap-block) var(--gap-items);
+
+  @include mq(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
