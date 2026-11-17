@@ -1,1 +1,6 @@
 // partials будуть додані пізніше через @forward
+@forward 'root';
+@forward 'fonts';
+@forward 'reset';
+@forward 'typography';
+@forward 'utilities';

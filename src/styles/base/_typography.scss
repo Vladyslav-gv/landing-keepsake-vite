@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+// Плавне прокручування; scroll-padding-top компенсує фіксовану шапку
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  min-height: 100vh;
+  padding-top: var(--header-h);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+  background-color: var(--color-white);
+}
+
+:focus-visible {
+  @include focus-ring;
+}

@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '../abstracts' as *;
+
+// Виводить значення токенів для одного брейкпоінта
+@mixin tokens-at($bp) {
+  @each $name, $steps in $tokens {
+    @if map.has-key($steps, $bp) {
+      --#{$name}: #{map.get($steps, $bp)};
+    }
+  }
+}
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  @each $name, $value in $fonts {
+    --font-#{$name}: #{$value};
+  }
+
+  @include tokens-at(base);
+}
+
+@each $bp in (md, lg) {
+  @include mq($bp) {
+    :root {
+      @include tokens-at($bp);
+    }
+  }
+}
