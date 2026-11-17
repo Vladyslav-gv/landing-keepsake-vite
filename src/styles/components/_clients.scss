@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // mobile: 2×3
+  gap: var(--grid-gap);
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr); // tablet: 3×2
+  }
+
+  @include mq(lg) {
+    grid-template-columns: repeat(6, 1fr); // desktop: 6 в рядок
+  }
+
+  &__item {
+    @include flex-center;
+
+    min-height: rem(72);
+    border: 1px solid var(--color-border);
+  }
+}

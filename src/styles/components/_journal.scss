@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.journal {
+  display: grid;
+  grid-template-columns: 1fr; // mobile і tablet: 1 колонка
+  gap: var(--gap-block) var(--gap-items);
+
+  @include mq(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

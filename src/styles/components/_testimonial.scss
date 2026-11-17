@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+.testimonial {
+  padding: var(--box-pad);
+  margin-top: var(--gap-block);
+  text-align: center;
+  background: var(--color-bg-light);
+
+  &__mark {
+    display: block;
+    font: 700 rem(64) / 0.8 var(--font-logo);
+    color: var(--color-accent);
+  }
+
+  &__quote {
+    font: 300 var(--fs-quote) / 1.6 var(--font-body);
+    color: var(--color-text-dark);
+  }
+
+  &__footer {
+    @include flex-center(column);
+
+    gap: var(--gap-items);
+    margin-top: var(--gap-items);
+  }
+
+  &__person {
+    display: flex;
+    gap: rem(12);
+    align-items: center;
+    text-align: left;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: rem(2);
+  }
+
+  &__name {
+  font: 400 calc(rem(14) / 1.2) var(--font-heading);
+  color: var(--color-text-dark);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-ui);
+  }
+
+  &__role {
+    font-size: var(--fs-small);
+    color: var(--color-muted);
+  }
+}
