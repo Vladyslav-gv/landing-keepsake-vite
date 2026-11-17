@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+.section-intro {
+  max-width: rem(560);
+  margin-block: rem(16) var(--gap-block);
+}

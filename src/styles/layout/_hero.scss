@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.hero {
+  padding-block: var(--section-gap);
+  text-align: center;
+  background: var(--color-bg-light);
+
+  &__title {
+    font: 300 var(--fs-hero) / 1.25 var(--font-heading);
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-hero);
+  }
+
+  &__text {
+    max-width: rem(560);
+    margin: rem(16) auto 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column; // mobile: одна під одною на всю ширину
+    gap: rem(12);
+    margin-top: var(--gap-block);
+
+    @include mq(md) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}

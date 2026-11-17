@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.cta {
+  &__inner {
+    @include flex-center(column);
+
+    gap: var(--gap-block);
+    text-align: center;
+  }
+
+  &__title {
+    font: 300 var(--fs-cta) / 1.25 var(--font-heading);
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-hero);
+  }
+}
