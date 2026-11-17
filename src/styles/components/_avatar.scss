@@ -6,7 +6,7 @@
   flex-shrink: 0;
   width: rem(48);
   height: rem(48);
-  font: 400 rem(14) / 1 var(--font-heading);
+  font: 400 calc(rem(14) / 1) var(--font-heading);
   color: var(--color-white);
   letter-spacing: var(--ls-ui);
   background: var(--color-text-dark);
