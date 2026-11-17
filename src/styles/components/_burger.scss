@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .burger {
+  --icon-size: #{rem(24)};
+
   @include button-reset;
   @include flex-center;
 

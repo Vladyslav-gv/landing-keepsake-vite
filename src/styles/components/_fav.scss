@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .fav {
+  --icon-size: #{rem(16)};
+
   display: none;
   width: var(--control);
   height: var(--control);

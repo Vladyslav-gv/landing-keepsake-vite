@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+// Розмір задається змінною --icon-size у контексті; за замовчуванням 20px
+.icon {
+  flex-shrink: 0;
+  width: var(--icon-size, #{rem(20)});
+  height: var(--icon-size, #{rem(20)});
+  fill: currentcolor;
+
+  &--accent {
+    color: var(--color-accent);
+  }
+}

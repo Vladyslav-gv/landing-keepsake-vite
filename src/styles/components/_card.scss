@@ -2,7 +2,7 @@
 
 .card {
   // карточки, які з'являються лише з певної ширини
-  &--from-md {
+    &--from-tablet {
     display: none;
 
     @include mq(md) {
@@ -10,7 +10,7 @@
     }
   }
 
-  &--from-lg {
+  &--from-desktop {
     display: none;
 
     @include mq(lg) {
@@ -55,6 +55,7 @@
   }
 
   &__plus {
+    --icon-size: #{rem(20)};
     @include flex-center;
 
     width: rem(48);

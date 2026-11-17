@@ -30,9 +30,13 @@
   }
 
   &__more {
-    @include flex-center;
-
+    display: flex;
+    flex-direction: column; // mobile: кнопка розтягується
     margin-top: var(--gap-block);
+
+    @include mq(md) {
+      align-items: center;
+    }
   }
 }
 
