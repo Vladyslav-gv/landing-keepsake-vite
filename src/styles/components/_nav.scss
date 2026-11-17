@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.nav {
+  display: none;
+  margin-left: auto;
+
+  @include mq(md) {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(24);
+
+    @include mq(lg) {
+      gap: rem(40);
+    }
+  }
+
+  &__link {
+    font: 400 var(--fs-ui) / 1 var(--font-heading);
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-ui);
+    transition: color 0.2s;
+
+    &:hover,
+    &--active {
+      color: var(--color-accent);
+    }
+  }
+}
