@@ -18,6 +18,7 @@
     "@prettier/plugin-pug": "^3.6.0",
     "@vituum/vite-plugin-pug": "^2.0.1",
     "autoprefixer": "^10.6.2",
+    "esbuild": "^0.28.2",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.1",
     "prettier": "^3.10.1",
