@@ -3,32 +3,32 @@
 
 $client-styles: (
   1: (
-    'font': 'heading',
+    'font': var(--font-heading),
     'weight': 700,
     'spacing': 3px,
   ),
   2: (
-    'font': 'logo',
+    'font': var(--font-logo),
     'weight': 700,
     'spacing': 0,
   ),
   3: (
-    'font': 'body',
+    'font': var(--font-body),
     'weight': 700,
     'spacing': 1px,
   ),
   4: (
-    'font': 'heading',
+    'font': var(--font-heading),
     'weight': 300,
     'spacing': 4px,
   ),
   5: (
-    'font': 'body',
+    'font': var(--font-body),
     'weight': 300,
     'spacing': 2px,
   ),
   6: (
-    'font': 'heading',
+    'font': var(--font-heading),
     'weight': 400,
     'spacing': 1px,
   ),
@@ -42,7 +42,7 @@ $client-styles: (
 
 @each $n, $s in $client-styles {
   .client--#{$n} {
-    font-family: var(--font-#{map.get($s, 'font')});
+    font-family: map.get($s, 'font');
     font-weight: map.get($s, 'weight');
     letter-spacing: map.get($s, 'spacing');
   }

@@ -1,11 +1,8 @@
 @use '../abstracts' as *;
-
 @include font-face('Oswald', 'oswald-300', 300);
 @include font-face('Oswald', 'oswald-400', 400);
 @include font-face('Oswald', 'oswald-700', 700);
-
 @include font-face('Open Sans', 'open-sans-300', 300);
 @include font-face('Open Sans', 'open-sans-400', 400);
 @include font-face('Open Sans', 'open-sans-700', 700);
-
 @include font-face('Dancing Script', 'dancing-script-700', 700);
