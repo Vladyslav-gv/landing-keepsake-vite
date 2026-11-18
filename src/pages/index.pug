@@ -1,9 +1,9 @@
 extends ../layouts/main
 
-append meta
+block append meta
   include ../includes/meta
 
-prepend styles
+block prepend styles
   include ../includes/preload-fonts
 
 block data
@@ -22,4 +22,4 @@ block content
     include ../components/sections/journal
   include ../components/footer
   a.to-top(href="#top" aria-label="Back to top")
-  +icon('arrow-up')
+  +icon("arrow-up")

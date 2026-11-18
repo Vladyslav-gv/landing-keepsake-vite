@@ -1,11 +1,11 @@
-section.section#about(aria-labelledby="services-title")
+section#about.section(aria-labelledby="services-title")
   .container
-    h2.section-title#services-title What do we do
+    h2#services-title.section-title What do we do
     p.section-intro We’re a small team of designers and makers who help brands look and feel exactly like themselves.
     ul.services
       each service in services
         li.service
-          span.service__icon(class={'service__icon--accent': service.accent})
+          span.service__icon(class={ "service__icon--accent": service.accent })
             +icon(service.icon)
           h3.service__title= service.title
           p.service__text= service.text

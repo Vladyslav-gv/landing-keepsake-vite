@@ -2,7 +2,7 @@
 
 .card {
   // карточки, які з'являються лише з певної ширини
-    &--from-tablet {
+  &--from-tablet {
     display: none;
 
     @include mq(md) {

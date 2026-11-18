@@ -1,6 +1,6 @@
 section.section(aria-labelledby="clients-title")
   .container
-    h2.section-title#clients-title Clients &amp; kind words
+    h2#clients-title.section-title Clients &amp; kind words
     p.section-intro Some of the people and brands we’ve been lucky to work with.
     ul.clients
       each client, i in clients
@@ -18,4 +18,4 @@ section.section(aria-labelledby="clients-title")
             span.testimonial__role= testimonial.role
         span.slider-dots(aria-hidden="true")
           each dot, i in Array(testimonial.dots).fill(0)
-            span.slider-dots__dot(class={'slider-dots__dot--active': i === 0})
+            span.slider-dots__dot(class={ "slider-dots__dot--active": i === 0 })

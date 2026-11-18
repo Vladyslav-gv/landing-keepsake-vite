@@ -1,9 +1,9 @@
-import sharp from "sharp";
-import { mkdir, readdir } from "node:fs/promises";
-import path from "node:path";
+import sharp from 'sharp';
+import { mkdir, readdir } from 'node:fs/promises';
+import path from 'node:path';
 
-const SRC = "src/assets/source";
-const OUT = "src/assets/images";
+const SRC = 'src/assets/source';
+const OUT = 'src/assets/images';
 
 const WIDTHS = {
   work: [360, 720],
@@ -18,13 +18,11 @@ const FORMATS = {
 
 await mkdir(OUT, { recursive: true });
 
-const files = (await readdir(SRC)).filter((f) =>
-  /\.(webp|jpe?g|png)$/i.test(f),
-);
+const files = (await readdir(SRC)).filter((f) => /\.(webp|jpe?g|png)$/i.test(f));
 
 for (const file of files) {
   const name = path.parse(file).name;
-  const group = name.split("-")[0];
+  const group = name.split('-')[0];
   const widths = WIDTHS[group];
 
   if (!widths) {

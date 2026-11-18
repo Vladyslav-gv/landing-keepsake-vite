@@ -9,23 +9,35 @@ footer.footer
               each link in col.links
                 li
                   a.footer__link(href=link.href)= link.text
-      .newsletter#newsletter
+      #newsletter.newsletter
         h2.footer__title Newsletter
         //- Без JS: submit веде на #subscribed, :target показує повідомлення
         form.newsletter__form(action="#subscribed" method="get")
           p.newsletter__text From new case studies and design notes, once a month.
           .newsletter__row
             label.visually-hidden(for="newsletter-email") Email address
-            input.newsletter__input.newsletter__input--email#newsletter-email(type="email" name="email" placeholder="Your email address" autocomplete="email" required aria-describedby="newsletter-email-error")
-            +btn('Subscribe', null)(type="submit")
-          p.newsletter__error.newsletter__error--email#newsletter-email-error Please enter a valid email address.
+            input#newsletter-email.newsletter__input.newsletter__input--email(
+              type="email"
+              name="email"
+              placeholder="Your email address"
+              autocomplete="email"
+              required
+              aria-describedby="newsletter-email-error"
+            )
+            +btn("Subscribe", null)(type="submit")
+          p#newsletter-email-error.newsletter__error.newsletter__error--email Please enter a valid email address.
           .newsletter__consent
-            input.newsletter__checkbox#newsletter-consent(type="checkbox" name="consent" required aria-describedby="newsletter-consent-error")
+            input#newsletter-consent.newsletter__checkbox(
+              type="checkbox"
+              name="consent"
+              required
+              aria-describedby="newsletter-consent-error"
+            )
             label(for="newsletter-consent") I agree to receive emails and accept the privacy policy
-          p.newsletter__error.newsletter__error--consent#newsletter-consent-error Please tick the box to continue.
-        p.newsletter__success#subscribed(role="status")
-          +icon('check')
+          p#newsletter-consent-error.newsletter__error.newsletter__error--consent Please tick the box to continue.
+        p#subscribed.newsletter__success(role="status")
+          +icon("check")
           | You’re all set! Check your inbox to confirm.
     .footer__bottom
-      p.footer__copy © #{site.year} #{site.name}. All rights reserved.
+      p.footer__copy © #{ site.year } #{ site.name }. All rights reserved.
       +socials(socials)

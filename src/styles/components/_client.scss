@@ -2,12 +2,36 @@
 @use '../abstracts' as *;
 
 $client-styles: (
-  1: ('font': 'heading', 'weight': 700, 'spacing': 3px),
-  2: ('font': 'logo', 'weight': 700, 'spacing': 0),
-  3: ('font': 'body', 'weight': 700, 'spacing': 1px),
-  4: ('font': 'heading', 'weight': 300, 'spacing': 4px),
-  5: ('font': 'body', 'weight': 300, 'spacing': 2px),
-  6: ('font': 'heading', 'weight': 400, 'spacing': 1px),
+  1: (
+    'font': 'heading',
+    'weight': 700,
+    'spacing': 3px,
+  ),
+  2: (
+    'font': 'logo',
+    'weight': 700,
+    'spacing': 0,
+  ),
+  3: (
+    'font': 'body',
+    'weight': 700,
+    'spacing': 1px,
+  ),
+  4: (
+    'font': 'heading',
+    'weight': 300,
+    'spacing': 4px,
+  ),
+  5: (
+    'font': 'body',
+    'weight': 300,
+    'spacing': 2px,
+  ),
+  6: (
+    'font': 'heading',
+    'weight': 400,
+    'spacing': 1px,
+  ),
 );
 
 .client {

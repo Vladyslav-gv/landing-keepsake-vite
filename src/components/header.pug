@@ -5,28 +5,46 @@ header.header
       ul.nav__list
         each item in nav
           li
-            a.nav__link(class={'nav__link--active': item.active} href=item.href aria-current=(item.active ? 'page' : false))= item.text
+            a.nav__link(
+              class={ "nav__link--active": item.active }
+              href=item.href
+              aria-current=item.active ? "page" : false
+            )= item.text
     a.fav(href="#works" aria-label="Favourites")
-      +icon('heart')
+      +icon("heart")
     //- Мобільне меню: нативний popover API, без JavaScript
-    button.burger(type="button" popovertarget="mobile-menu" aria-controls="mobile-menu" aria-label="Open menu")
-      +icon('burger')
-    nav.mobile-menu#mobile-menu(popover aria-label="Mobile")
+    button.burger(
+      type="button"
+      popovertarget="mobile-menu"
+      aria-controls="mobile-menu"
+      aria-label="Open menu"
+    )
+      +icon("burger")
+    nav#mobile-menu.mobile-menu(popover aria-label="Mobile")
       .mobile-menu__top
         +logo
-        button.burger.burger--close(type="button" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Close menu")
-          +icon('close')
+        button.burger.burger--close(
+          type="button"
+          popovertarget="mobile-menu"
+          popovertargetaction="hide"
+          aria-label="Close menu"
+        )
+          +icon("close")
       ul.mobile-menu__list
         each item in nav
           li
-            a.mobile-menu__link(class={'mobile-menu__link--active': item.active} href=item.href aria-current=(item.active ? 'page' : false))
+            a.mobile-menu__link(
+              class={ "mobile-menu__link--active": item.active }
+              href=item.href
+              aria-current=item.active ? "page" : false
+            )
               = item.text
-              +icon('chevron')
+              +icon("chevron")
       .mobile-menu__actions
-        +btn('Contact us', '#contact')
-          +icon('mail')
-        +btn('Favourites', '#works', 'ghost')
-          +icon('heart')(class="icon--accent")
+        +btn("Contact us", "#contact")
+          +icon("mail")
+        +btn("Favourites", "#works", "ghost")
+          +icon("heart").icon--accent
       .mobile-menu__contacts
         p.mobile-menu__label Get in touch
         a.mobile-menu__contact(href=`mailto:${site.email}`)= site.email

@@ -1,15 +1,21 @@
-section.section.works#works(aria-labelledby="works-title")
+section#works.section.works(aria-labelledby="works-title")
   .container
     each cat, i in categories
-      input.filter__input(class=`filter__input--${cat.id}` type="radio" name="filter" id=`filter-${cat.id}` checked=(i === 0))
+      input.filter__input(
+        class=`filter__input--${cat.id}`
+        type="radio"
+        name="filter"
+        id=`filter-${cat.id}`
+        checked=i === 0
+      )
     .works__head
-      h2.section-title#works-title Our awesome works
+      h2#works-title.section-title Our awesome works
       .filter(role="group" aria-label="Filter works by category")
         each cat in categories
           label.chip(class=`chip--${cat.id}` for=`filter-${cat.id}`)= cat.label
     ul.works__grid
       each work in works
-        li.card(class={[`card--from-${work.from}`]: work.from} data-category=work.categories.join(' '))
+        li.card(class={ [`card--from-${work.from}`]: work.from } data-category=work.categories.join(" "))
           +work-card(work)
     .works__more
-      +btn('Load more works', null, 'secondary')(type="button")
+      +btn("Load more works", null, "secondary")(type="button")

@@ -38,10 +38,10 @@
   }
 
   &__name {
-  font: 400 calc(rem(14) / 1.2) var(--font-heading);
-  color: var(--color-text-dark);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-ui);
+    font: 400 calc(rem(14) / 1.2) var(--font-heading);
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-ui);
   }
 
   &__role {
